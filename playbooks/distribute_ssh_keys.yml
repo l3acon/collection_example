@@ -2,6 +2,10 @@
 - name: distribute ssh private keys
   hosts: all
   tasks:
+    - name: debug key path
+      ansible.builtin.debug:
+        msg: "{{ key_path }}"
+
     - name: Copy key
       ansible.builtin.copy:
         src: "{{ key_path }}"
