@@ -5,7 +5,7 @@
     - name: Copy key
       ansible.builtin.copy:
         src: "{{ key_path }}"
-        dest: /home/{{ ansible_user }}/.ssh/id_rsa
+        dest: "/home/{{ ansible_user }}/.ssh/id_rsa"
         owner: "{{ ansible_user }}"
         group: "{{ ansible_user }}"
         mode: '0700'
